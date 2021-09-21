@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'BebasNeue', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Font */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(font/BebasNeue-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(font/Montserrat-Black.woff) format('woff');
+}
+/* navbar */
+
+nav{
+    display: flex;
+    background-color: rgb(255, 0, 43);
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    color: rgb(255, 255, 255);
+    height: 60px;
+    align-items: center;
+}
+nav .logo{
+    font-family: 'Montserrat';
+    letter-spacing: 2px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 0.9em;
+}
+nav ul li a:hover{
+    color: rgb(255, 217, 217);
+}
+
+/* Menu toggle hamburger */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+.menu-toggle input{
+    position: absolute;
+    width: 35px;
+    height: 30px;
+    opacity: 0;
+    z-index: 2;
+    top: -5px;
+    left: -3px;
+    cursor: pointer;
+}
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* hamburger animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 0;
+}
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    transform: scale(0);
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+/* Responsive */
+
+/* tablet */
+@media screen and (max-width: 768px){
+    nav ul{
+        width: 50%;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 576px){
+    .menu-toggle{
+        display: flex;
+    }
+    nav ul{
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        background-color: rgb(255, 2, 179);
+        top: 0;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        width: 48%;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+    nav ul.slide{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .conten{
+            width: 900px;
+            margin: 10px auto;
+            border: 5px solid black
+        }
+        .kotak{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 100px;
+            color: cornsilk;
+        }
+        .conten:hover .kotak{
+            transform: rotate(360deg);
+            margin-left: 800px;
+            background-color: cornflowerblue;
+        }
+        .kotak1{
+            transition: margin-left 3s, transform 3s 2s;
+        }
+        .kotak2{
+            transition: 3s ease-in;
+        }
+        .kotak3{
+            transition: 3s ease-out;
+        }
+        .kotak4{
+            transition: 3s ease-in-out;
+        }
+        .kotak5{
+            transition: 3s linear;
+        }
+        .kotak6{
+            transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    </style>
+</head>
+<body>
+    <div class="conten">
+        <div class="kotak kotak1">kotak1</div>
+        <div class="kotak kotak2">kotak1</div>
+        <div class="kotak kotak3">kotak1</div>
+        <div class="kotak kotak4">kotak1</div>
+        <div class="kotak kotak5">kotak1</div>
+        <div class="kotak kotak6">kotak1</div>
+    </div>
+</body>
+</html>

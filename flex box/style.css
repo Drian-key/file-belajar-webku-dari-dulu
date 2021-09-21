@@ -1,0 +1,200 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    line-height: 1.65;
+    padding-bottom: 1000px;
+}
+/* latihan satu */
+.container-satu{
+    width: 80%;
+    margin: 50px auto;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    background-color: rgb(25, 190, 255);
+}
+.kolom-utama{
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.sidebar-satu{
+    width: 40%;
+    float: left;
+    margin-left: 10px;
+}
+.sidebar-dua{
+    width: 53%;
+    float: right;
+    margin-right: 10px;
+}
+.sidebar-satu, .sidebar-dua{
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+.sidebar-satu ul li a{
+    text-decoration: none;
+    margin-right: 40px;
+}
+.sidebar-satu ul li{
+    list-style: none;
+}
+
+@media ( min-width:1000px ){
+    .container-satu{
+        padding: 20px;  
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .kolom-utama{
+        flex: 3;
+        order: 2;
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 0 10px;
+        text-align: center;
+    }
+    .sidebar-satu{
+        flex: 1;
+        order: 1;
+    }
+    .sidebar-dua{
+        flex: 1;
+        order: 3;
+    }
+}
+
+/* latihan 2 */
+.container-dua{
+    max-width: 80%;
+    margin: 50px auto;
+}
+.layanan{
+    padding: 20px;
+    box-sizing: border-box; 
+    margin-bottom: 20px; 
+}
+.layanan.satu{
+    background-color: aqua;
+}
+.layanan.dua{
+    background-color: blueviolet;
+}
+.layanan.tiga{
+    background-color: darkorange;
+}
+
+/* latihan 3 */
+.container-tiga{
+    max-width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.thumbnail{
+    width: 50%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.thumbnail img{
+    width: 100%;
+}
+
+/* latihan 4 */
+.container-empat{
+    max-width: 80%;
+    margin: 50px auto;
+}
+.card{
+    border: 1px solid rgb(71, 71, 71);
+    border-radius: 10px;
+    background-color: aliceblue;
+    overflow: hidden ;
+    margin: 10px;
+    flex: 1;
+}
+.card .content{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.card .header{
+    height: 150px;
+    background-color: rgb(40, 49, 49);
+}
+
+/* latihan 5 */
+.container-lima{
+    width: 500px;
+    height: 500px;
+    margin: 50% auto;
+    border: 1px solid black;
+    display: flex;
+}
+.kotak{
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    color: wheat;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+.kotak span{
+    margin: auto;
+}
+
+
+@media ( min-width: 600px ){
+    .container-dua{
+        display: flex;
+        justify-content: space-between; 
+    }
+    .layanan{
+        width: 30%;
+    }
+    .thumbnail{
+        width: 25%;
+    }
+    .container-empat{   
+        display: flex;
+    }
+    .card .header{
+        height: 200px;
+    }
+    .card{
+        transition: .2s;
+    }   
+    .card:hover{
+    transform: scale(1.1)
+}
+}
