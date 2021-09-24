@@ -21,6 +21,12 @@
             font-family: sans-serif;
             color: #333;
         }
+        .wawa{
+            background-color: salmon;
+        }
+        section#a a{
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -29,9 +35,11 @@
     <div id="container">
         <section id="a">
             <p class="p1">paragraf 1</p>
-            <a href="https://instagram.com">instagram dr</a>
+            <div class="link">
+                <a href="https://instagram.com">instagram dr</a>
+            </div>
             <p class="p2">paragraf 2</p>
-            <p class="p3">paragraf 3</p>
+            <p class="p3" onclick="ubahWarnap3()">paragraf 3</p>
         </section>
         <section id="b">
             <p>paragraf 4</p>
@@ -43,6 +51,6 @@
         </section>
     </div>
 
-<script src="script.js"></script>
+<script src="script-event.js"></script>
 </body>
 </html>
